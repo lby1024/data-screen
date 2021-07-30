@@ -1,25 +1,15 @@
-import { FC, useEffect, useState } from "react"
+import { FC, useEffect } from "react"
 import styled from "styled-components"
 
 const XContent:FC = ({children}) => {
-
-    const [wh, setWh] = useState({
-        width: 160,
-        height: 90,
-    })
 
     useEffect(() => {
         window.onresize = () => rem()
         rem()
     }, [])
 
-    function rem() {
-        const [ width, height ] = getWH()
-        setWh({ width, height })
-    }
-
     return <Content>
-        <div style={{background: "red", ...wh}}>{children}</div>
+        <div className="inner" >{children}</div>
     </Content>
 }
 
@@ -31,15 +21,22 @@ const Content = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    .inner {
+        background-color: red;
+        width: 100rem;
+        height: ${100*9/16}rem;
+    }
 `
 
-function getWH() {
+function rem() {
     const w = document.documentElement.clientWidth || document.body.clientWidth
     const h = document.documentElement.clientHeight || document.body.clientHeight
+    const htmlDom = document.getElementsByTagName('html')[0];
     if(w/h <= 16/9) {
-        return [w, w*9/16]
+        htmlDom.style.fontSize = `${w/100}px`
     }
     else{
-        return [16*h/9, h]
+        const width = 16*h/9
+        htmlDom.style.fontSize = `${width/100}px`
     }
 }
