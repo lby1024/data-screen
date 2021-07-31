@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import XContent from './component/content';
+import XHeader from './component/header';
 import { useRem } from './hooks/use-rem';
 
 function App() {
@@ -8,15 +9,10 @@ function App() {
 
   return (
     <XContent >
-      <Box/> 
+      <XHeader>成都公安局合成作战平台</XHeader>
     </XContent>
   );
 }
 
 export default App;
 
-const Box = styled.div`
-  width: 3.67rem;
-  height: 3.15rem;
-  background-color: skyblue;
-`
