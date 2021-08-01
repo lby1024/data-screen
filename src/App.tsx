@@ -8,9 +8,9 @@ function App() {
   useRem()
 
   return (
-    <XContent >
-      <XHeader>成都公安局合成作战平台</XHeader>
-    </XContent>
+    <XContent 
+      head={<XHeader>成都公安局合成作战平台</XHeader>} 
+    />
   );
 }
 
