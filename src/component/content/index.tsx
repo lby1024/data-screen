@@ -1,8 +1,8 @@
-import { FC, ReactNode } from "react"
+import { FC } from "react"
 import styled from "styled-components"
 
 interface IContent {
-    head: ReactNode
+    head: any
 }
 
 const XContent:FC<IContent> = ({head}) => {
