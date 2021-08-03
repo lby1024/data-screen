@@ -10,9 +10,9 @@ import XContainer from 'component/container';
 function App() {
 
   return (
-    <XContainer>
-      ADSFASDF
-    </XContainer>
+    <XContainer 
+      header={<XHeader>成都市公安局合成作战平台</XHeader>}
+    />
   );
 }
 

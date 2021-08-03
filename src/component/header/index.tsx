@@ -14,7 +14,7 @@ const XHeader:FC = ({children}) => {
 export default XHeader
 
 const Content = styled.div`
-    height: 0.99rem;
+    height: 100%;
     background-color: #000105;
     background-image: url(${bg});
     background-size: cover;
@@ -24,12 +24,12 @@ const Content = styled.div`
 `
 const Title = styled.div`
     background-color: #000517;
-    width: 7rem;
+    width: 500PX;
     height: 100%;
     color: #8abee4;
-    font-size: 0.5rem;
+    font-size: 32px;
     text-align: center;
-    padding-top: 0.05rem;
+    padding-top: 5px;
     box-sizing: border-box;
     span {
         background: linear-gradient(to top, #243b71, #8abee4);

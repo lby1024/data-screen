@@ -5,12 +5,16 @@ import { useScale } from "./use-scale";
 const designWidth = 1600
 const designHeight = 900
 
-const XContainer:FC = () => {
+interface IXContainer {
+    header: any
+}
+
+const XContainer:FC<IXContainer> = ({header}) => {
 
     const [scale] = useScale()    
 
     return <Content scale={scale} width={designWidth} height={designHeight} >
-        <div className="part01"></div>
+        <div className="part01">{header}</div>
         <div className="part02"></div>
         <div className="part03"></div>
         <div className="part04"></div>
@@ -31,7 +35,7 @@ const Content = styled.div<{
     width: ${p=>p.width}px;
     height: ${p=>p.height}px;
     transform: translate(-50%, -50%) scale(${p=>p.scale});
-    background-color: rosybrown;
+    background-color: #010310;
     position: fixed;
     left: 50%;
     top: 50%;
@@ -46,35 +50,35 @@ const Content = styled.div<{
         "part08 part08 part08 part08";
     .part01{
         grid-area: part01;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part02{
         grid-area: part02;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part03{
         grid-area: part03;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part04{
         grid-area: part04;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part05{
         grid-area: part05;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part06{
         grid-area: part06;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part07{
         grid-area: part07;
-        background-color: red;
+        background-color: #2e4f95;
     }
     .part08{
         grid-area: part08;
-        background-color: red;
+        background-color: #2e4f95;
     }
 
 `
