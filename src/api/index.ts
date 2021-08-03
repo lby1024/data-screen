@@ -19,3 +19,19 @@ export function dataChart01(): Promise<IData> {
         }, 500)
     })
 }
+
+export interface IData02 extends IData {
+    series02: number[]
+}
+
+export function dataChart02(): Promise<IData02> {
+    return new Promise(resolve => {
+        const Timer = setTimeout(() => {
+            resolve({
+                x: ['金牛', '青羊', '锦江', '成华', '龙泉', '郫都', '新都', '双流', '大丰'],
+                series: [num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50)],
+                series02: [num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50)]
+            })
+        }, 500)
+    })
+}

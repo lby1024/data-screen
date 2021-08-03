@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import * as echarts from "echarts";
-import { useChart01Data } from "./use-chart01-data";
+import { useDataChart01 } from "./use-data-chart01";
 
 const option: any = {
     textStyle: {
@@ -41,7 +41,7 @@ const option: any = {
 export function useChart01() {
     const myChart = useRef<echarts.ECharts>()
     const chart = useRef<any>()
-    const [data] = useChart01Data()
+    const [data] = useDataChart01()
 
     useEffect(() => {
         if(!data) return

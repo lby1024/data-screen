@@ -1,7 +1,7 @@
 import { dataChart01, IData } from "api";
 import { useEffect, useState } from "react";
 
-export function useChart01Data() {
+export function useDataChart01() {
     const [data, setData] = useState<IData|null>(null)
 
     useEffect(() => {
