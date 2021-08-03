@@ -63,7 +63,7 @@ const FlyBorder: FC<IFlyBorder> = ({ width, height, className }) => {
         </mask>
       </defs>
       {/*  */}
-      <use href={`#${rectId}`} strokeWidth="1" stroke="#235fa7" />
+      <use href={`#${rectId}`} strokeWidth="2" stroke="#0d3666" />
       <use
         href={`#${rectId}`}
         strokeWidth="3"

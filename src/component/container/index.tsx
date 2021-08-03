@@ -7,15 +7,16 @@ const designHeight = 900
 
 interface IXContainer {
     header: any
+    part02: any
 }
 
-const XContainer:FC<IXContainer> = ({header}) => {
+const XContainer:FC<IXContainer> = (props) => {
 
     const [scale] = useScale()    
 
     return <Content scale={scale} width={designWidth} height={designHeight} >
-        <div className="part01">{header}</div>
-        <div className="part02"></div>
+        <div className="part01">{props.header}</div>
+        <div className="part02">{props.part02}</div>
         <div className="part03"></div>
         <div className="part04"></div>
         <div className="part05"></div>
@@ -50,35 +51,38 @@ const Content = styled.div<{
         "part08 part08 part08 part08";
     .part01{
         grid-area: part01;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part02{
         grid-area: part02;
-        background-color: #2e4f95;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* background-color: #142342; */
     }
     .part03{
         grid-area: part03;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part04{
         grid-area: part04;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part05{
         grid-area: part05;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part06{
         grid-area: part06;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part07{
         grid-area: part07;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
     .part08{
         grid-area: part08;
-        background-color: #2e4f95;
+        /* background-color: #142342; */
     }
 
 `
