@@ -2,15 +2,18 @@ import { FC } from "react"
 import styled from "styled-components"
 
 interface IContent {
-    head: any
+    head: any,
+    left01: any,
+    left02: any,
+    left03: any,
 }
 
-const XContent:FC<IContent> = ({head}) => {
+const XContent:FC<IContent> = (props) => {
 
     return <Content>
         <div className="inner" >
-            <div className="header">{head}</div>
-            <div className="box1"></div>
+            <div className="header">{props.head}</div>
+            <div className="box1">{props.left01}</div>
             <div className="box2"></div>
             <div className="box3"></div>
             <div className="box4"></div>
@@ -44,35 +47,35 @@ const Content = styled.div`
         grid-gap: .2rem;
         .header {
             grid-area: head;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box1 {
             grid-area: box1;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box2 {
             grid-area: box2;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box3 {
             grid-area: box3;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box4 {
             grid-area: box4;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box5 {
             grid-area: box5;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .box6 {
             grid-area: box6;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
         .foot {
             grid-area: foot;
-            background-color: #253e77;
+            /* background-color: #253e77; */
         }
     }
 `

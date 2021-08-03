@@ -11,20 +11,31 @@ const Content = styled.div`
   }
 `;
 
-const FlyBox: FC = ({ children }) => {
+interface IFlybox {
+  className?: string
+}
+
+const FlyBox: FC<IFlybox> = ({ children }) => {
   const content = useRef<any>();
   const [size, setSize] = useState({
     width: 0,
     height: 0
   });
 
-  useEffect(() => {
+  function sizeInit() {
     const { clientHeight, clientWidth } = content.current;
     setSize({
       width: clientWidth,
-      height: clientHeight
+      height: clientHeight,
     });
-  }, []);
+  }
+
+  useEffect(() => {
+      const timer = setTimeout(() => {
+          sizeInit();
+          clearTimeout(timer)
+      }, 200)
+  }, [children]);
 
   return (
     <Content ref={content}>

@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
 import XContent from './component/content';
-import XHeader from './component/header';
 import { useRem } from './hooks/use-rem';
+import XHeader from './component/header';
+import XLeftA from 'component/left/left-a';
+import FlyBox from './component/fly-box';
+import XLeftB from 'component/left/left-b';
+import XContainer from 'component/container';
 
 function App() {
-  useRem()
 
   return (
-    <XContent 
-      head={<XHeader>成都公安局合成作战平台</XHeader>} 
-    />
+    <XContainer>
+      ADSFASDF
+    </XContainer>
   );
 }
 
 export default App;
-
