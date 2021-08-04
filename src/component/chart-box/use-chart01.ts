@@ -10,6 +10,7 @@ const option: any = {
     xAxis: {
         type: 'category',
         data: ['金牛', '青羊', '锦江', '成华', '龙泉', '郫都', '新都', '双流', '大丰'],
+        axisTick: {show: false},
         axisLabel: {
             formatter: (v: string) => v.split("").join("\n")
         },

@@ -39,9 +39,10 @@ export function dataChart02(): Promise<IData02> {
 type TSeriesItem = number[]
 
 export interface IData03 {
-    x: string[],
+    x: (string|number)[],
     series: TSeriesItem[]
 }
+
 
 export function dataChart03(): Promise<IData03> {
     return new Promise(resolve => {
@@ -54,6 +55,20 @@ export function dataChart03(): Promise<IData03> {
                     [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
                     [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
                     [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                ],
+            })
+        }, 500)
+    })
+}
+
+export function dataChart04(): Promise<IData03> {
+    const start = num(90)/100
+    return new Promise(resolve => {
+        const Timer = setTimeout(() => {
+            resolve({
+                x: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+                series: [
+                    [start, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, start],
                 ],
             })
         }, 500)

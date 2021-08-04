@@ -63,6 +63,9 @@ const Content = styled.div<{
     }
     .part03{
         grid-area: part03;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         /* background-color: #142342; */
     }
     .part04{
