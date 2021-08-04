@@ -1,7 +1,5 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import * as echarts from "echarts";
-import { useDataChart02 } from "./use-data-chart02";
-import { useDataChart03 } from "./use-data-chart03";
 import { useData } from "hooks/use-data";
 import { dataChart04, IData03 } from "utils/api";
 

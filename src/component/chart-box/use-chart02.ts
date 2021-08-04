@@ -1,18 +1,13 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
-import { useDataChart02 } from "./use-data-chart02";
+import { useData } from "hooks/use-data";
+import { dataChart02, IData02 } from "utils/api";
 
 const option: any = {
     textStyle: {
         fontSize: 12,
         color: '#79839E'
     },
-    // tooltip: {
-    //     trigger: 'axis',
-    //     axisPointer: {
-    //         type: 'shadow'
-    //     }
-    // },
     legend: {
         data: ['破案排名1', '破案排名2'],
         orient: 'vertical', // horizontal
@@ -76,7 +71,7 @@ const option: any = {
 export function useChart02() {
     const myChart = useRef<echarts.ECharts>()
     const chart = useRef<any>()
-    const [data] = useDataChart02()
+    const [data] = useData<IData02>(dataChart02)
 
     useEffect(() => {
         if(!data) return

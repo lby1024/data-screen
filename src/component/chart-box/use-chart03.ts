@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef } from "react"
 import * as echarts from "echarts";
-import { useDataChart02 } from "./use-data-chart02";
-import { useDataChart03 } from "./use-data-chart03";
+import { useData } from "hooks/use-data";
+import { dataChart03, IData03 } from "utils/api";
 
 const option: any = {
     textStyle: {
@@ -72,7 +72,7 @@ const option: any = {
 export function useChart03() {
     const myChart = useRef<echarts.ECharts>()
     const chart = useRef<any>()
-    const [data] = useDataChart03()
+    const [data] = useData<IData03>(dataChart03)
 
     useEffect(() => {
         if(!data) return
