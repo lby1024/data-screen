@@ -35,3 +35,27 @@ export function dataChart02(): Promise<IData02> {
         }, 500)
     })
 }
+
+type TSeriesItem = number[]
+
+export interface IData03 {
+    x: string[],
+    series: TSeriesItem[]
+}
+
+export function dataChart03(): Promise<IData03> {
+    return new Promise(resolve => {
+        const Timer = setTimeout(() => {
+            resolve({
+                x: ['2013','2014','2015', '2016', '2017', '2018', '2019', '2020', '2021'],
+                series: [
+                    [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                    [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                    [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                    [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                    [num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100],
+                ],
+            })
+        }, 500)
+    })
+}

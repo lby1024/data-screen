@@ -1,3 +1,4 @@
+import FlyBox from "component/fly-box";
 import { FC } from "react";
 import styled from "styled-components";
 import bg from "../../static/header.png"
@@ -19,6 +20,7 @@ const Content = styled.div`
     background-image: url(${bg});
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `
@@ -31,6 +33,7 @@ const Title = styled.div`
     text-align: center;
     padding-top: 5px;
     box-sizing: border-box;
+    border-bottom: 1px solid #243b71;
     span {
         background: linear-gradient(to top, #243b71, #8abee4);
         background-clip: text;

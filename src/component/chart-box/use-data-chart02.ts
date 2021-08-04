@@ -1,4 +1,4 @@
-import { dataChart02, IData02 } from "api";
+import { dataChart02, IData02 } from "utils/api";
 import { useEffect, useState } from "react";
 
 export function useDataChart02() {

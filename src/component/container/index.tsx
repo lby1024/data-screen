@@ -8,6 +8,7 @@ const designHeight = 900
 interface IXContainer {
     header: any
     part02: any
+    part03: any
 }
 
 const XContainer:FC<IXContainer> = (props) => {
@@ -17,7 +18,7 @@ const XContainer:FC<IXContainer> = (props) => {
     return <Content scale={scale} width={designWidth} height={designHeight} >
         <div className="part01">{props.header}</div>
         <div className="part02">{props.part02}</div>
-        <div className="part03"></div>
+        <div className="part03">{props.part03}</div>
         <div className="part04"></div>
         <div className="part05"></div>
         <div className="part06"></div>

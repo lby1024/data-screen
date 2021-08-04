@@ -7,24 +7,26 @@ const option: any = {
         fontSize: 12,
         color: '#79839E'
     },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'shadow'
-        }
-    },
+    // tooltip: {
+    //     trigger: 'axis',
+    //     axisPointer: {
+    //         type: 'shadow'
+    //     }
+    // },
     legend: {
         data: ['破案排名1', '破案排名2'],
         orient: 'vertical', // horizontal
         right: 10,
         bottom: "bottom",
+        itemWidth: 12,
+        itemHeight: 8,
         textStyle: {color: "#fff", fontSize: 11}
     },
     grid: {
-        left: '10',
-        right: '10',
-        bottom: '40',
-        top: "20",
+        left: 10,
+        right: 10,
+        bottom: 40,
+        top: 20,
         containLabel: true
     },
     xAxis: {
@@ -43,9 +45,7 @@ const option: any = {
                 width: 3
             }
         },
-        axisTick: {
-            show: false
-        },
+        axisTick: {show: false},
     },
     series: [
         {
@@ -89,7 +89,6 @@ export function useChart02() {
 
     useEffect(() => { 
         myChart.current = echarts.init(chart.current)
-        myChart.current?.setOption(option)        
     }, [])
 
     return [chart]
