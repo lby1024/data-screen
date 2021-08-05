@@ -5,7 +5,7 @@ import { dataChart01, IData } from "utils/api";
 
 const option: any = {
     textStyle: {
-        fontSize: 12,
+        // fontSize: 240,
         color: '#79839E'
     },
     xAxis: {

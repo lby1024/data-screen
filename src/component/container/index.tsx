@@ -9,6 +9,9 @@ interface IXContainer {
     header: any
     part02: any
     part03: any
+    part04: any
+    part05: any
+    part06: any
 }
 
 const XContainer:FC<IXContainer> = (props) => {
@@ -19,9 +22,9 @@ const XContainer:FC<IXContainer> = (props) => {
         <div className="part01">{props.header}</div>
         <div className="part02">{props.part02}</div>
         <div className="part03">{props.part03}</div>
-        <div className="part04"></div>
-        <div className="part05"></div>
-        <div className="part06"></div>
+        <div className="part04">{props.part04}</div>
+        <div className="part05">{props.part05}</div>
+        <div className="part06">{props.part06}</div>
         <div className="part07"></div>
         <div className="part08"></div>
     </Content>
@@ -74,6 +77,9 @@ const Content = styled.div<{
     }
     .part05{
         grid-area: part05;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         /* background-color: #142342; */
     }
     .part06{

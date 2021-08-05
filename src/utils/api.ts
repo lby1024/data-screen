@@ -11,7 +11,7 @@ function num(max: number, min=10) {
 
 export function dataChart01(): Promise<IData> {
     return new Promise(resolve => {
-        const Timer = setTimeout(() => {
+        setTimeout(() => {
             resolve({
                 x: ['金牛', '青羊', '锦江', '成华', '龙泉', '郫都', '新都', '双流', '大丰'],
                 series: [num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50)]
@@ -26,7 +26,7 @@ export interface IData02 extends IData {
 
 export function dataChart02(): Promise<IData02> {
     return new Promise(resolve => {
-        const Timer = setTimeout(() => {
+        setTimeout(() => {
             resolve({
                 x: ['金牛', '青羊', '锦江', '成华', '龙泉', '郫都', '新都', '双流', '大丰'],
                 series: [num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50), num(50)],
@@ -46,7 +46,7 @@ export interface IData03 {
 
 export function dataChart03(): Promise<IData03> {
     return new Promise(resolve => {
-        const Timer = setTimeout(() => {
+        setTimeout(() => {
             resolve({
                 x: ['2013','2014','2015', '2016', '2017', '2018', '2019', '2020', '2021'],
                 series: [
@@ -64,7 +64,7 @@ export function dataChart03(): Promise<IData03> {
 export function dataChart04(): Promise<IData03> {
     const start = num(90)/100
     return new Promise(resolve => {
-        const Timer = setTimeout(() => {
+        setTimeout(() => {
             resolve({
                 x: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
                 series: [
@@ -74,3 +74,26 @@ export function dataChart04(): Promise<IData03> {
         }, 500)
     })
 }
+
+export function dataChart06(): Promise<IData03> {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve({
+                x: ['入室抢劫', '当街偷盗', '团伙诈骗', '刑事案件', '民事案件'],
+                series: [
+                    [num(200), num(200), num(200), num(200), num(200)],
+                ],
+            })
+        }, 500)
+    })
+}
+
+
+type TPieItem = {
+    name: string,
+    value: number
+}
+export interface IDataPie {
+    series: TPieItem[]
+}
+

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import FlyBoder from "./fly-border";
 
 const Content = styled.div`
+  background-color: #0f113a;
   position: relative;
   .border {
     position: absolute;
@@ -15,7 +16,7 @@ interface IFlybox {
   className?: string
 }
 
-const FlyBox: FC<IFlybox> = ({ children }) => {
+const FlyBox: FC<IFlybox> = ({ children, className }) => {
   const content = useRef<any>();
   const [size, setSize] = useState({
     width: 0,
@@ -38,7 +39,7 @@ const FlyBox: FC<IFlybox> = ({ children }) => {
   }, [children]);
 
   return (
-    <Content ref={content}>
+    <Content ref={content} className={className} >
       {children}
       <FlyBoder className="border" width={size.width} height={size.height} />
     </Content>

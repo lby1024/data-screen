@@ -4,10 +4,11 @@ import styled from "styled-components";
 
 interface IXChartBox {
     title: string
+    className?: string
 }
 
-const XChartBox:FC<IXChartBox> = ({title, children}) => {
-    return <FlyBox>
+const XChartBox:FC<IXChartBox> = ({title, children, className}) => {
+    return <FlyBox className={className} >
         <Content>
             <div className="title" >{title}</div>
             <div className="pan">{children}</div>
@@ -21,7 +22,6 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f113a;
     .title{
         color: #fff;
         border: 1px solid #0a5299;
