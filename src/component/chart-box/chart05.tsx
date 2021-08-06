@@ -1,16 +1,16 @@
 import { FC } from "react";
 import styled from "styled-components";
 import XChartBox from ".";
-import { useChart01 } from "./use-chart01";
+import { useChart05 } from "./use-chart05";
 
 const XChart05:FC = () => {
 
-    // const [chart] = useChart01()
+    const [chart] = useChart05()
 
     return (
         <Content>
             <XChartBox title="全市犯罪人员籍贯分布地" className="box" fly={true} >
-                <div className="pan">
+                <div className="pan" ref={chart} >
 
                 </div>
             </XChartBox>

@@ -48,7 +48,7 @@ const option: any = {
 export function useChart04() {
     const myChart = useRef<echarts.ECharts>()
     const chart = useRef<any>()
-    const [data] = useData<IData03>(dataChart04)
+    const [data] = useData<IData03>(dataChart04, 7000)
 
     useEffect(() => {
         if(!data) return

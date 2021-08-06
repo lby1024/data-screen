@@ -3,12 +3,12 @@ import * as echarts from "echarts";
 
 const option = {
     title:{
-        text:"性别",
+        text:"年龄段",
         left:"center",
         top:"32%",
         textStyle:{
             color:"#32a4fa",
-            fontSize:24,
+            fontSize:20,
             align:"center"
         }
     },
