@@ -10,7 +10,7 @@ const XChart0607:FC = () => {
     const [chart07] = useChart07()
 
     return (
-        <XChartBox title="案发时段分析">
+        <XChartBox title="案发类型统计">
             <Content>
                 <div className="left" ref={chart06} ></div>
                 <div className="right" ref={chart07} ></div>

@@ -7,7 +7,7 @@ interface IFlyBorder {
   className?: string;
 }
 
-const FlyBorder: FC<IFlyBorder> = ({ width, height, className }) => {
+const XBorder: FC<IFlyBorder> = ({ width, height, className }) => {
   const path = `M0 0 L${width} 0 L${width} ${height} L0 ${height} Z`;
   const [{ colorId, rectId, maskId }, setId] = useState({
     colorId: "colorId",
@@ -36,7 +36,7 @@ const FlyBorder: FC<IFlyBorder> = ({ width, height, className }) => {
           id={colorId}
           cx="50%"
           cy="50%"
-          fx="100%"
+          fx="50%"
           fy="50%"
           r="50%"
         >
@@ -47,19 +47,10 @@ const FlyBorder: FC<IFlyBorder> = ({ width, height, className }) => {
         <path id={rectId} d={path} fill="none" />
         {/* 蒙版 */}
         <mask id={maskId}>
-          <circle
-            cx="0"
-            cy="0"
-            r={(width + height) / 5}
-            fill={`url(#${colorId})`}
-          >
-            <animateMotion
-              dur="3s"
-              path={path}
-              rotate="auto"
-              repeatCount="indefinite"
-            />
-          </circle>
+          <circle cx="0" cy="0" r={(width + height) / 8} fill={`url(#${colorId})`} />
+          <circle cx={width} cy="0" r={(width + height) / 8} fill={`url(#${colorId})`} />
+          <circle cx={width} cy={height} r={(width + height) / 8} fill={`url(#${colorId})`} />
+          <circle cx="0" cy={height} r={(width + height) / 8} fill={`url(#${colorId})`} />
         </mask>
       </defs>
       {/*  */}
@@ -74,9 +65,9 @@ const FlyBorder: FC<IFlyBorder> = ({ width, height, className }) => {
   );
 };
 
-FlyBorder.defaultProps = {
+XBorder.defaultProps = {
   width: 200,
   height: 100
 };
 
-export default FlyBorder;
+export default XBorder;

@@ -9,7 +9,7 @@ const XChart05:FC = () => {
 
     return (
         <Content>
-            <XChartBox title="全市犯罪人员籍贯分布地" className="box" >
+            <XChartBox title="全市犯罪人员籍贯分布地" className="box" fly={true} >
                 <div className="pan">
 
                 </div>

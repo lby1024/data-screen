@@ -88,6 +88,32 @@ export function dataChart06(): Promise<IData03> {
     })
 }
 
+export function dataChart08(): Promise<IData03> {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve({
+                x: ['二仙桥','九眼桥','升仙湖','玉林路','盐道街','抚琴路','三瓦窑','东坡路'],
+                series: [
+                    [num(200), num(200), num(200), num(200), num(200), num(200), num(200), num(200)],
+                ],
+            })
+        }, 500)
+    })
+}
+
+export function dataChart12(): Promise<IData03> {
+    const start = num(90)/100
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve({
+                x: [0, 18, 28, 38, 48, 58, 68, 78],
+                series: [
+                    [start, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, num(90)/100, start],
+                ],
+            })
+        }, 500)
+    })
+}
 
 type TPieItem = {
     name: string,

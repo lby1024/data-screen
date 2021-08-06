@@ -1,19 +1,19 @@
 import { FC } from "react";
 import styled from "styled-components";
 import XChartBox from ".";
-import { useChart06 } from "./use-chart06";
-import { useChart07 } from "./use-chart07";
+import { useChart08 } from "./use-chart08";
+import { useChart09 } from "./use-chart09";
 
 const XChart0809:FC = () => {
 
-    const [chart06] = useChart06()
-    const [chart07] = useChart07()
+    const [chart08] = useChart08()
+    const [chart09] = useChart09()
 
     return (
         <XChartBox title="案发街道统计">
             <Content>
-                <div className="left" ref={chart06} ></div>
-                <div className="right" ref={chart07} ></div>
+                <div className="left" ref={chart08} ></div>
+                <div className="right" ref={chart09} ></div>
             </Content>
         </XChartBox>
     )

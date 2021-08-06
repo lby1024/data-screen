@@ -12,6 +12,8 @@ interface IXContainer {
     part04: any
     part05: any
     part06: any
+    part07: any
+    part08: any
 }
 
 const XContainer:FC<IXContainer> = (props) => {
@@ -25,8 +27,8 @@ const XContainer:FC<IXContainer> = (props) => {
         <div className="part04">{props.part04}</div>
         <div className="part05">{props.part05}</div>
         <div className="part06">{props.part06}</div>
-        <div className="part07"></div>
-        <div className="part08"></div>
+        <div className="part07">{props.part07}</div>
+        <div className="part08">{props.part08}</div>
     </Content>
 }
 

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 type TFn = () => Promise<any>
 
-export function useData<T>(fn: TFn) {
+export function useData<T>(fn: TFn, time=3000) {
     const [data, setData] = useState<T|null>(null)
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export function useData<T>(fn: TFn) {
         const timer = setTimeout(() => {
             getData()
             clearTimeout(timer)
-        }, 3000)
+        }, time)
     }
 
     return [data]

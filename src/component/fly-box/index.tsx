@@ -1,5 +1,6 @@
 import { FC, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
+import XBorder from "./border";
 import FlyBoder from "./fly-border";
 
 const Content = styled.div`
@@ -14,9 +15,10 @@ const Content = styled.div`
 
 interface IFlybox {
   className?: string
+  fly?: boolean
 }
 
-const FlyBox: FC<IFlybox> = ({ children, className }) => {
+const FlyBox: FC<IFlybox> = ({ children, className, fly }) => {
   const content = useRef<any>();
   const [size, setSize] = useState({
     width: 0,
@@ -41,9 +43,17 @@ const FlyBox: FC<IFlybox> = ({ children, className }) => {
   return (
     <Content ref={content} className={className} >
       {children}
-      <FlyBoder className="border" width={size.width} height={size.height} />
+      {
+        fly 
+        ? <FlyBoder className="border" width={size.width} height={size.height} />
+        : <XBorder className="border" width={size.width} height={size.height} /> 
+      }
     </Content>
   );
 };
+
+FlyBox.defaultProps = {
+  fly: false
+}
 
 export default FlyBox;

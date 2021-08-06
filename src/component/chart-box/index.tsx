@@ -5,10 +5,11 @@ import styled from "styled-components";
 interface IXChartBox {
     title: string
     className?: string
+    fly?: boolean
 }
 
-const XChartBox:FC<IXChartBox> = ({title, children, className}) => {
-    return <FlyBox className={className} >
+const XChartBox:FC<IXChartBox> = ({title, children, className, fly}) => {
+    return <FlyBox className={className} fly={fly}  >
         <Content>
             <div className="title" >{title}</div>
             <div className="pan">{children}</div>
