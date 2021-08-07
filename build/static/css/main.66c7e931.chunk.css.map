@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/static/reset.css"],"names":[],"mappings":"AAAA,EACI,QAAS,CACT,SAAU,CACV,UACJ","file":"main.66c7e931.chunk.css","sourcesContent":["* {\n    margin: 0;\n    padding: 0;\n    color: #fff;\n}"]}
